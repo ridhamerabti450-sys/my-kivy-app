@@ -12,13 +12,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build with Buildozer
-        uses: jreleaser/buildozer-action@v1.0.0
+        uses: ArtemSBulgakov/buildozer-action@v1.6.1
         with:
           command: buildozer android debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: my-app-bundle
+          name: package
           path: ./**/*.apk
           
